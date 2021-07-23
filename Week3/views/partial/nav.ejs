@@ -1,0 +1,54 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#!">Start Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <%if (pagename=="Home"){%>
+                        <a class="nav-link" style="color:orange" id="index.html" href="/">Home</a>
+                    <%}else {%>
+                        <a class="nav-link" id="index.html" href="/">Home</a>
+                    <%}%>
+
+                    <%if (pagename=="About"){%>
+                        <a class="nav-link" style="color:orange" id="about.html" href="/">About</a>
+                    <%}else {%>
+                        <a class="nav-link" href="/About">About</a>
+                    <%}%>
+                        <%if (pagename=="Form"){%>
+                            <a class="nav-link" style="color:orange" id="form.html" href="/">Form</a>
+                        <%}else {%>
+                            <a class="nav-link" href="/Form">Form</a>
+                        <%}%>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div style="z-index: 12;
+display: block;
+text-align: right;
+background-color: #333a40;
+color: gray;
+position: absolute;
+width: 155px;
+right: 0;
+border-radius: 10px;
+padding: 11px;
+font-size: 12px"
+
+
+
+>
+    <form action="/post" method="POST">
+        <label>
+            <input type="text" name="email" placeholder="email">
+        </label>
+        <label>
+            <input type="text" name="password" placeholder="password">
+        </label>
+        <input type="submit">
+    </form>
+</div>
