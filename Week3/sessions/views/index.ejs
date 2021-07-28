@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("partials/head.ejs"); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('partials/header'); %>
+</header>
+
+<main>
+    <div style="z-index: 12;
+display: block;
+text-align: right;
+background-color: #333a40;
+color: gray;
+position: absolute;
+width: 155px;
+right: 0;
+border-radius: 10px;
+padding: 11px;
+font-size: 12px"
+
+
+
+    >
+        <form action="/login" method="POST">
+            <label>
+                <input type="text" name="email" placeholder="email">
+            </label>
+            <label>
+                <input type="password" name="password" placeholder="password">
+            </label>
+            <input type="submit">
+        </form>
+    </div>
+
+</main>
+
+<footer>
+    <%- include('partials/footer'); %>
+</footer>
+
+</body>
+</html>

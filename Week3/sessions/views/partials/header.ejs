@@ -1,0 +1,24 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">EJS Is Fun</a>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <%if (pagename==="Home"){%>
+                <a class="nav-link" style="color:orange" id="index.html" href="/">Home</a>
+            <%}else {%>
+                <a class="nav-link" id="index.html" href="/">Home</a>
+            <%}%>
+            <%if (typeof(sess)!="undefined"&& sess.loggedIn===true){%>
+                    <a class="nav-link" style="color:orange" id="about.html" href="/profile">Profile</a>
+                    <a class="nav-link" style="color:orange" id="about.html" href="/logout">Logout</a>
+
+                <%}%>
+        </li>
+    </ul>
+</nav>
+
+<%if(typeof (errors) != 'undefined'){%>
+    <% for(x in errors){%>
+    <br><span><%=errors[x]%></span>
+    <%}%>
+<%}%>
